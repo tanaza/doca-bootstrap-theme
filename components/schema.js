@@ -58,6 +58,9 @@ class Schema extends Component {
                           <h4>{obj.get('title')}</h4>
                         </div>
                       }
+                      {obj.get('extended_description') &&                        
+                          <MarkdownPreview value={obj.get('extended_description')} />
+                      }
                       {obj.get('example') && <ExampleObject example={obj.get('example')} />}
                       <ObjectDefinitionTable definitions={obj.get('all_props')} />
                     </div>
